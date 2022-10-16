@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS1</title>
+</head>
+<body>
+    <h1>Kalkulator liczb</h1>
+    <form>
+        <input type="number" id="pole1"/> <br>
+        <input type="number" id="pole2"/> <br>
+        <input type="number" id="pole3"/> <br>
+        <input type="number" id="pole4"/> <br>
+        <br>
+        <button type="submit" id="button1">Przelicz</button>
+        <div id="wynik"></div>
+    </form>
+ </body>
+<script>
+    const btn = document.querySelector("button")
+    function myFunction() {
+        var pole1 = document.getElementById("pole1").value*1;
+        var pole2 = document.getElementById("pole2").value*1;
+        var pole3 = document.getElementById("pole3").value*1;
+        var pole4 = document.getElementById("pole4").value*1;
+        var suma = pole1+pole2+pole3+pole4;
+        alert("srednia: "+suma/4);
+        alert("suma: "+suma);
+        alert("Wartosc max: " + Math.max(pole1,pole2,pole3,pole4));
+        alert("Wartosc min: " + Math.min(pole1,pole2,pole3,pole4));
+
+    }
+
+    btn.addEventListener("click",myFunction);
+
+</script>
+
+</html>
